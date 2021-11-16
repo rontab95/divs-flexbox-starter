@@ -102,10 +102,12 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
+  
+  background-color: #353a41;
 }
 
 .wrapper {
@@ -113,6 +115,8 @@ body {
   font-weight: 700;
   display:flex;
   justify-content: space-between;
+  
+  
 
 }
 
@@ -122,23 +126,50 @@ body {
   line-height: 1.5em;
   /* font-size: 1.6em; */
   background-color: #353a41;
-  height: 300px;
+  /* height: 300px; */
   width: 30%;
   display: flex;
   justify-content: center;
   align-content: center;
+  
 }
 
-.div-1, .div-2 , .div-3 p{
+.div-1 p{
+
+    font-size: 1.1em;
+    font-family: 'Zilla Slab';
+    color:orangered;
+   
+    
+}
+
+
+.div-2  p{
+    
+
+    font-size: 1.1em;
+    border-left: 4px white;
+    border-right: 4px white;
+    font-family: 'Ubuntu Mono';
+    font-style:italic;
+    color:white;
+
+}
+
+ .div-3 p{
 
     font-size: 1em;
-    padding:2rem;
-   border-color:  rgb(240, 236, 236);
-    border: 10px;;
+    font-family: 'Montserrat';
+    color:yellow;
+
 }
 
+.divx{
 
+    width:2px;
+    background-color:#555151;
 
+}
 
 
 /* ==========================================================================
