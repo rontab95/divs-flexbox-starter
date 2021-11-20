@@ -14,6 +14,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    background-color: #222;
 }
 
 /*
@@ -97,79 +98,23 @@ textarea {
 
 
 html {
-  background-color: #fff;
-  height: 100%;
+    background-color: #030303;
+    height: 100%;
 }
+
+
 
 body {
-  
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
-  
-  background-color: #353a41;
-}
-
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
-  display:flex;
-  justify-content: space-between;
-  
-  
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 2em;
+    font-size: 1.25em;
+    height: 100%;
+    color: #fff;
+    background-color: #030303;
 
 }
 
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.5em;
-  /* font-size: 1.6em; */
-  background-color: #353a41;
-  /* height: 300px; */
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  
-}
 
-.div-1 p{
-
-    font-size: 1.1em;
-    font-family: 'Zilla Slab';
-    color:orangered;
-   
-    
-}
-
-
-.div-2  p{
-    
-
-    font-size: 1.1em;
-    border-left: 4px white;
-    border-right: 4px white;
-    font-family: 'Ubuntu Mono';
-    font-style:italic;
-    color:white;
-
-}
-
- .div-3 p{
-
-    font-size: 1em;
-    font-family: 'Montserrat';
-    color:yellow;
-
-}
-
-.divx{
-
-    width:2px;
-    background-color:#555151;
-
-}
 
 
 /* ==========================================================================
@@ -238,8 +183,10 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -252,10 +199,19 @@ body {
    Modify as content requires.
    ========================================================================== */
 
+@media all and (max-width: 768px) {
+    body {
+        padding: 1em;
+    }
+}
+
+
+
+
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -266,11 +222,13 @@ body {
    ========================================================================== */
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
@@ -282,11 +240,11 @@ body {
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
 
     /*
@@ -333,5 +291,93 @@ body {
     h2,
     h3 {
         page-break-after: avoid;
+    }
+}
+
+
+header,
+footer {
+    background-color: #030303;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+
+header h1 {
+
+    
+        font-family: 'Lora', sans-serif;
+        font-size: 3em;
+    
+}
+
+footer {
+
+    border-top: 0.85px solid #fff;
+    padding: 10px;
+}
+
+main {
+    background-color: #030303;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main p {
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25em;
+}
+
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+
+}
+
+
+.flex-items {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.5em;
+        font-size: 1em;
+        border-bottom: 1px solid #555;
+        
+    
+}
+
+hr {
+    display: block;
+
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+
+@media (min-width: 1200px) {
+    .flex-items {
+        flex-basis: 30%;
+        border-bottom: none;
+    }
+
+    #div-2 p {
+        border-left: 1px solid #555;
+        border-right: 1px solid #555;
+        padding: 0 40px;
     }
 }
